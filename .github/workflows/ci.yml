@@ -82,5 +82,5 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Run typechecker
+      - name: Build application
         run: pnpm run build
