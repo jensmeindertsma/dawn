@@ -1,0 +1,7 @@
+services:
+  app:
+    build: .
+    environment:
+      - PORT=1312
+    ports:
+      - "1312:1312"

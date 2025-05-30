@@ -1,0 +1,35 @@
+# macOS
+.DS_Store
+
+# Git
+/.gitignore
+
+# Node.js
+/.node_version
+
+# PNPM
+/node_modules/
+
+# React Router
+/.react-router/
+/build/
+
+# GitHub
+/.github/
+
+# VSCode
+/.vscode/
+
+# Prettier
+/.prettierrc.json
+
+# ESLint
+/.eslintcache
+/eslint.config.ts
+
+# Docker
+/.dockerignore
+
+# Other
+/LICENSE.md
+/README.md
