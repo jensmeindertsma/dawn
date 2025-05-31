@@ -3,10 +3,6 @@ import { getDatabase } from "~/services/database.server";
 import { useEffect, useRef } from "react";
 import { Form, redirect, useNavigation } from "react-router";
 
-export function meta(): Route.MetaDescriptors {
-  return [{ title: "Home" }];
-}
-
 export default function Home({ loaderData }: Route.ComponentProps) {
   const formRef = useRef<HTMLFormElement>(null);
   const navigation = useNavigation();
