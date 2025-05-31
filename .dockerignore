@@ -1,12 +1,6 @@
 # macOS
 .DS_Store
 
-# Git
-/.gitignore
-
-# Node.js
-/.node_version
-
 # PNPM
 /node_modules/
 
@@ -14,11 +8,25 @@
 /.react-router/
 /build/
 
+# Prisma
+/app/generated/prisma/
+/data/
+
 # GitHub
 /.github/
 
 # VSCode
 /.vscode/
+
+# Git
+/.gitignore
+
+# Node.js
+/.node_version
+
+# Secrets
+/.env
+/.env.example
 
 # Prettier
 /.prettierrc.json
@@ -29,6 +37,7 @@
 
 # Docker
 /.dockerignore
+/docker-compose.yml
 
 # Other
 /LICENSE.md

@@ -8,5 +8,12 @@
 /.react-router/
 /build/
 
+# Prisma
+/app/generated/prisma/
+/data/
+
+# Secrets
+/.env
+
 # ESLint
 .eslintcache

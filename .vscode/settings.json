@@ -2,6 +2,12 @@
   "[dockerfile]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-containers"
   },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "[properties]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
   "[shellscript]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
@@ -13,6 +19,8 @@
   "editor.tabSize": 2,
   "eslint.useFlatConfig": true,
   "files.associations": {
+    ".env": "properties",
+    ".env.example": "properties",
     ".node-version": "shellscript",
     "*.css": "tailwindcss"
   },
