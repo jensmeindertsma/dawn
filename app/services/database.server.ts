@@ -2,14 +2,8 @@ import { PrismaClient } from "../generated/prisma";
 import { PrismaBetterSQLite3 } from "@prisma/adapter-better-sqlite3";
 
 export function getDatabase() {
-  const databaseUrl = process.env.APPLICATION_DATABASE_URL;
-
-  if (!databaseUrl) {
-    throw new Error("Missing `APPLICATION_DATABASE_URL`");
-  }
-
   const adapter = new PrismaBetterSQLite3({
-    url: databaseUrl,
+    url: "file:./data/database.db",
   });
 
   const client = new PrismaClient({ adapter });

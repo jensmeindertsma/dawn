@@ -24,5 +24,8 @@
     ".node-version": "shellscript",
     "*.css": "tailwindcss"
   },
-  "prettier.configPath": "prettierrc.json"
+  "prettier.configPath": "prettierrc.json",
+  "[ignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  }
 }

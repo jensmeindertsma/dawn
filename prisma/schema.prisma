@@ -1,6 +1,6 @@
 datasource db {
   provider = "sqlite"
-  url      = env("PRISMA_DATABASE_URL")
+  url      = "file:../data/database.db"
 }
 
 generator client {
