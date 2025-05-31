@@ -24,6 +24,10 @@
 # Node.js
 /.node_version
 
+# Secrets
+/.env
+/.env.example
+
 # Prettier
 /.prettierrc.json
 

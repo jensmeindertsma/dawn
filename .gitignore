@@ -12,5 +12,8 @@
 /app/generated/prisma/
 /data/
 
+# Secrets
+/.env
+
 # ESLint
 .eslintcache
