@@ -19,8 +19,6 @@ export default function Home({ loaderData }: Route.ComponentProps) {
 
   return (
     <>
-      <title>Home</title>
-
       <h1>Home</h1>
       <p>We currently have {loaderData.users.length} users!</p>
 
