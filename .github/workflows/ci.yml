@@ -74,7 +74,7 @@ jobs:
       - name: Build Docker image
         uses: docker/build-push-action@v6
         with:
-          tags: tomato:latest
+          tags: dawn:latest
           load: true
 
       - name: Upload image
@@ -83,4 +83,4 @@ jobs:
           echo "${{ secrets.CABIN_KEY }}" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
           ssh-keyscan -H ${{ secrets.CABIN_HOST }} >> ~/.ssh/known_hosts
-          docker save tomato:latest | gzip | ssh -i ~/.ssh/id_ed25519 github@${{ secrets.CABIN_HOST }} "docker load"
+          docker save dawn:latest | gzip | ssh -i ~/.ssh/id_ed25519 github@${{ secrets.CABIN_HOST }} "docker load"

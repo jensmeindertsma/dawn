@@ -10,7 +10,7 @@ generator client {
   previewFeatures = ["driverAdapters", "queryCompiler"]
 }
 
-model Tomato {
+model User {
   id   Int    @id @default(autoincrement())
   name String
 }

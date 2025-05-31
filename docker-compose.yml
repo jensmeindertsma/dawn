@@ -1,6 +1,6 @@
 services:
   app:
-    image: tomato:latest
+    image: dawn:latest
     build:
       context: .
     environment:

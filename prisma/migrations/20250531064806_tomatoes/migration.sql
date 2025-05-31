@@ -1,4 +1,0 @@
--- CreateTable
-CREATE TABLE "Tomato" (
-    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT
-);

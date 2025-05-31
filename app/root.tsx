@@ -1,5 +1,5 @@
-import "./app.css";
 import type { Route } from "./+types/root";
+import stylesheet from "./app.css?url";
 import {
   isRouteErrorResponse,
   Links,
@@ -10,16 +10,18 @@ import {
 } from "react-router";
 
 export function meta(): Route.MetaDescriptors {
-  return [{ title: "Tomato" }];
+  return [{ title: "Dawn" }];
 }
 
 export function links(): Route.LinkDescriptors {
   return [
     {
       rel: "icon",
-      href: "/tomato.png",
+      href: "/dawn.png",
       type: "image/png",
     },
+    { rel: "preload", href: stylesheet, as: "style" },
+    { rel: "stylesheet", href: stylesheet },
   ];
 }
 

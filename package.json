@@ -1,11 +1,11 @@
 {
-  "name": "@jensmeindertsma/tomato",
+  "name": "@jensmeindertsma/dawn",
   "private": true,
   "type": "module",
   "packageManager": "pnpm@10.11.0",
   "scripts": {
     "build": "prisma generate && react-router build",
-    "clean": "rimraf .react-router app/generated build .eslintcache",
+    "clean": "rimraf build",
     "database:generate": "prisma generate",
     "database:migrate": "prisma migrate dev",
     "database:reset": "prisma migrate reset",
