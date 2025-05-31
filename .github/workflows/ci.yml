@@ -87,3 +87,16 @@ jobs:
           chmod 600 ~/.ssh/id_ed25519
           ssh-keyscan -H ${{ secrets.CABIN_HOST }} >> ~/.ssh/known_hosts
           docker save dawn:latest | gzip | ssh -i ~/.ssh/id_ed25519 github@${{ secrets.CABIN_HOST }} "docker load"
+
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy the latest version
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.CABIN_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H ${{ secrets.CABIN_HOST }} >> ~/.ssh/known_hosts
+          ssh -i ~/.ssh/id_ed25519 github@${{ secrets.CABIN_HOST }} "/var/lib/harbor/deploy.sh dawn"
