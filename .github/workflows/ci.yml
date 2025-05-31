@@ -76,6 +76,9 @@ jobs:
         with:
           tags: dawn:latest
           load: true
+        env:
+          DOCKER_BUILD_SUMMARY: false
+          DOCKER_BUILD_RECORD_UPLOAD: false
 
       - name: Upload image
         run: |
